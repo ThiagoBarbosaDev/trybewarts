@@ -45,3 +45,8 @@
 .main .img #trybewarts-forms-logo {
   height: 500px;
 }
+
+.name-surname-wrapper {
+  display: flex;
+  flex-direction: row;
+}
