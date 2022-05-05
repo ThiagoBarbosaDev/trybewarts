@@ -55,6 +55,11 @@
   flex-direction: row;
 }
 
+.main .display #evaluation-form .radio-family {
+  display: flex;
+  flex-direction: column;
+}
+
 .main .img #trybewarts-forms-logo {
   height: 500px;
 }
