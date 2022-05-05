@@ -69,15 +69,15 @@
   display: flex;
 }
 
+.main .display #evaluation-form .textarea-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .main .img #trybewarts-forms-logo {
   height: 500px;
 }
 
 .main .display .form-condition {
   display: flex;
-}
-
-.textarea-container {
-  display: flex;
-  flex-direction: column;
 }

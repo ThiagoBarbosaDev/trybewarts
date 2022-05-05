@@ -20,10 +20,3 @@ agreement.addEventListener('change', () => {
     submitForm.disabled = true;
   }
 });
-
-const characterCounter = document.querySelector('#contador');
-const textArea = document.querySelector('textarea');
-
-textArea.addEventListener('input', () => {
-  characterCounter.innerText = `${textArea.value.length}`;
-});
