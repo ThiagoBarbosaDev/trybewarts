@@ -50,6 +50,11 @@
   flex-direction: row;
 }
 
+.main .display #evaluation-form .email-house-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
 .main .img #trybewarts-forms-logo {
   height: 500px;
 }
