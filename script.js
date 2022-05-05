@@ -13,6 +13,17 @@ buttonSubmit.addEventListener('click', () => {
 const submitForm = document.getElementById('submit-btn');
 const agreement = document.getElementById('agreement');
 
-agreement.addEventListener('click', () => {
-  submitForm.disabled = this.checked;
+agreement.addEventListener('change', () => {
+  if (agreement.checked) {
+    submitForm.disabled = false;
+  } else {
+    submitForm.disabled = true;
+  }
+});
+
+const characterCounter = document.querySelector('#contador');
+const textArea = document.querySelector('textarea');
+
+textArea.addEventListener('input', () => {
+  characterCounter.innerText = `${textArea.value.length}`;
 });
