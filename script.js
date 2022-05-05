@@ -25,5 +25,5 @@ const characterCounter = document.querySelector('#counter');
 const textArea = document.querySelector('textarea');
 
 textArea.addEventListener('input', () => {
-  characterCounter.innerText = `${textArea.value.length}`;
+  characterCounter.innerText = `${500 - textArea.value.length}`;
 });
