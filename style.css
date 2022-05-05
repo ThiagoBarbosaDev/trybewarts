@@ -65,18 +65,16 @@
   flex-direction: column;
 }
 
+.main .display #evaluation-form .form-satisfacao {
+  display: flex;
+}
+
 .main .img #trybewarts-forms-logo {
   height: 500px;
 }
 
-.radio-family {
+.main .display .form-condition {
   display: flex;
-  flex-direction: column;
-}
-
-.form-satisfacao {
-  display: flex;
-  flex-direction: row;
 }
 
 .textarea-container {
