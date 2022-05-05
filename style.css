@@ -76,3 +76,8 @@
 .main .display .form-condition {
   display: flex;
 }
+
+.textarea-container {
+  display: flex;
+  flex-direction: column;
+}
