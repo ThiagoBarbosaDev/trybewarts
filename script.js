@@ -9,3 +9,10 @@ buttonSubmit.addEventListener('click', () => {
     alert('Email ou senha inválidos.');
   }
 });
+
+const submitForm = document.getElementById('submit-btn');
+const agreement = document.getElementById('agreement');
+
+agreement.addEventListener('click', () => {
+  submitForm.disabled = this.checked;
+});
