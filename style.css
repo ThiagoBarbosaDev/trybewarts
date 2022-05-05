@@ -68,3 +68,8 @@
   display: flex;
   flex-direction: column;
 }
+
+.form-satisfacao {
+  display: flex;
+  flex-direction: row;
+}
