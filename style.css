@@ -39,17 +39,17 @@
   display: flex;
 }
 
-.main #evaluation-form {
+.main .display #evaluation-form {
   display: flex;
   flex-direction: column;
   width: 675px;
 }
 
-.main .img #trybewarts-forms-logo {
-  height: 500px;
-}
-
-.name-surname-wrapper {
+.main .display #evaluation-form .name-surname-wrapper {
   display: flex;
   flex-direction: row;
+}
+
+.main .img #trybewarts-forms-logo {
+  height: 500px;
 }
