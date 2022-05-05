@@ -13,7 +13,11 @@
   align-items: center;
 }
 
-.title {
+.header .img img {
+  width: 100px;
+}
+
+.header .title {
   justify-content: center;
 }
 
@@ -26,3 +30,12 @@
   display: flex;
 }
 
+/* main css */
+.main {
+  display: flex;
+}
+
+.main #evaluation-form {
+  display: flex;
+  width: 675px
+}
