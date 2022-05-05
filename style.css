@@ -8,7 +8,6 @@
   flex-direction: row;
   display: flex;
   background-color: rgb(50, 167, 145);
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -34,6 +33,10 @@
 .main {
   display: flex;
   flex-direction: row;
+}
+
+.main .display {
+  display: flex;
 }
 
 .main #evaluation-form {
