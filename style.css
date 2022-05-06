@@ -22,11 +22,15 @@ body {
   height: 90px;
 }
 
+.img {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 
 .img-logo {
   height: 100%;
   padding: 10px;
-  padding-left: 30px;
 }
 
 .img-logo img {
@@ -70,16 +74,10 @@ h1 {
   display: flex;
 }
 
-.img {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
 .main .display #evaluation-form {
   display: flex;
   flex-direction: column;
-  flex-basis: 675px;
+flex-basis: 675px;
   gap: 10px;
   align-items: center;
 }
