@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -7,10 +9,10 @@
 body {
   display: flex;
   flex-direction: column;
-  justify-content:space-between;
+  justify-content: space-between;
   min-height: 100vh;
-  font-family: 'Inknut Antiqua', Arial, Helvetica, sans-serif;
-  background-color: #f0ecec;
+  font-family: "Inknut Antiqua", Arial, Helvetica, sans-serif;
+  background-color: rgb(240, 236, 236);
 }
 
 .header {
@@ -62,7 +64,7 @@ h2 {
   height: 80%;
   text-align: center;
   color: white;
-  background-color: #502484;
+  background-color: rgb(80, 36, 132);
   border-radius: 10px;
   border: none;
   cursor: pointer;
@@ -98,13 +100,12 @@ flex-basis: 675px;
 }
 
 
-#evaluation-form input[type=text],
-#evaluation-form input[type=email] {
+
+#evaluation-form .trybewarts-login input {
   height: 30px;
   border: none;
   border-radius: 5px;
   width: 100%;
-  height: 100%;
   background-color: white;
   font-family: 'Inknut Antiqua', Arial, Helvetica, sans-serif;
   padding-left: 15px;
@@ -180,7 +181,7 @@ input::placeholder {
   align-content: center;
   gap: 10px;
   margin: auto;
-  }
+}
 
 .checkbox-item-wrapper .form-item {
   flex-basis: 100px;
@@ -252,7 +253,7 @@ input::placeholder {
   display: flex;
   align-items: center;
   gap: 10px;
-  }
+}
 
 .form-btn {
   width: 100%;
@@ -262,12 +263,12 @@ input::placeholder {
   width: 100%;
   text-align: center;
   color: white;
-  background-color: #502484;
+  background-color: rgb(80, 36, 132);
   border-radius: 5px;
   height: 40px;
   border: none;
   cursor: pointer;
-  font-family: 'Inknut Antiqua', Arial, Helvetica, sans-serif;
+  font-family: "Inknut Antiqua", Arial, Helvetica, sans-serif;
 }
 
 footer {

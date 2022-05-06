@@ -39,20 +39,12 @@ submitForm.addEventListener('click', () => {
   const getName = document.getElementById('input-name').value;
   const getLastName = document.getElementById('input-lastname').value;
   const fullName = `${getName} ${getLastName}`;
-
-  result.push(fullName);
-});
-
-submitForm.addEventListener('click', () => {
   const getEmail = document.getElementById('input-email').value;
-
-  result.push(getEmail);
-});
-
-submitForm.addEventListener('click', () => {
   const getHouse = document.getElementById('house');
   const house = getHouse.children[getHouse.selectedIndex].text;
 
+  result.push(fullName);
+  result.push(getEmail);
   result.push(house);
 });
 
