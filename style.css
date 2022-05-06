@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inknut Antiqua', Arial, Helvetica, sans-serif;
+  font-family: "'Inknut Antiqua'", Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -109,7 +109,7 @@ h2 {
   background-color: white;
   border-radius: 12px;
   border: none;
-  padding: 10px;
+  padding: 20px;
   height: 80%;
 }
 
@@ -131,6 +131,7 @@ h2 {
 }
 
 .select-form {
+  padding-left: 5px;
   display: flex;
   gap: 10px;
   width: 50%;
