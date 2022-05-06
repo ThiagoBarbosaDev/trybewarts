@@ -24,12 +24,17 @@ body {
 
 .img {
   height: 100%;
-  padding: 10px;
-  margin-left: 10px;
+  display: flex;
+  align-items: center;
 }
 
-img {
+.img-logo img {
   max-height: 100%;
+}
+
+.img-logo {
+  height: 100%;
+  padding: 10px;
 }
 
 h1 {
@@ -43,49 +48,55 @@ h1 {
   margin-right: 10px;
 }
 
-.trybewarts-login {
-  display: flex;
-  gap: 0px 10px;
-  padding: 5px;
+#submit-button {
+  width: 100%;
+  text-align: center;
+  color: white;
+  background-color: #502484;
+  border-radius: 10px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inknut Antiqua', Arial, Helvetica, sans-serif;
 }
+
 /* main css */
 .main {
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: center;
+  align-items: center;
 }
 
 .main .display {
   display: flex;
-  padding: 30px;
 }
 
 .main .display #evaluation-form {
   display: flex;
   flex-direction: column;
-  width: 675px;
-  gap: 10px 0;
+flex-basis: 675px;
+  gap: 10px;
+  align-items: center;
 }
 
 .main .display #evaluation-form .name-surname-wrapper {
   display: flex;
   flex-direction: row;
-  gap: 0 10px;
+  gap: 5px;
+  width: 100%;
 }
 
 .main .display #evaluation-form .email-house-wrapper {
   display: flex;
   flex-direction: row;
-  gap: 0 10px;
+  gap: 5px;
+  width: 100%;
 }
 
-.main .display #evaluation-form .email-house-wrapper #house {
-    margin-left: 5px;
-}
-
-.input, select {
-  /* width: 100%; */
+#evaluation-form input[type=text],
+#evaluation-form input[type=email] {
   height: 30px;
   border: none;
   border-radius: 5px;
@@ -101,6 +112,7 @@ h1 {
   background-color: white;
   border-radius: 12px;
   border: none;
+  font-family: ;
 }
 
 .select-form option[value="Gitnória"],
@@ -157,54 +169,45 @@ input::placeholder {
 
 .main .display #evaluation-form .checkbox-content {
   display: flex;
-  flex-flow: column;
-}
-
-.main .display #evaluation-form .checkbox-content .align {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-}
-
-.main .display #evaluation-form .checkbox-content .align input {
-    margin-right: 5px;
+  flex-flow: column wrap;
 }
 
 .main .display #evaluation-form .form-satisfacao {
   display: flex;
-  flex-flow: column;
-  padding: 3px;
+  align-items: baseline;
 }
 
-.main .display #evaluation-form .form-satisfacao .align {
-    display: flex;
-    align-items: baseline;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    padding: 3px;
-  }
+.form-satisfacao input {
+  margin-left: 15px;
+}
+
+.form-satisfacao label {
+  margin-left: 5px;
+}
 
 .main .display #evaluation-form .textarea-container {
   display: flex;
   flex-direction: column;
 }
 
-.main .display #evaluation-form .textarea-container #counter {
-    text-align: right;
+#counter {
+  text-align: end;
+  position: relative;
+  z-index: 1;
+  top: -40px;
+  right: 10px
 }
 
 .main .img #trybewarts-forms-logo {
   height: 500px;
+  width: 100%;
 }
 
 .main .display .form-condition {
   display: flex;
-  align-items: baseline;
-}
-
-.main .display .form-condition #label-infos {
-    padding-left: 5px;
-}
+  align-items: center;
+  gap: 10px;
+  }
 
 .form-btn {
   width: 100%;
@@ -232,4 +235,8 @@ footer {
 
 footer div {
   color: white;
+}
+
+hr {
+  width: 100%;
 }
