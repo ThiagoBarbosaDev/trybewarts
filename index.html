@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trybewarts</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Montserrat:wght@900&family=VT323&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -19,8 +23,8 @@
         <!-- Forms de login-->
         <section class="trybewarts-login-container">
             <form action="" class="trybewarts-login">
-                <input type="email" name="email" placeholder="Email" id="email-input" />
-                <input type="password" name="password" placeholder="Senha" id="pwd-input" />
+                <input type="email" class="input" name="email" placeholder="Email" id="email-input" />
+                <input type="password" class="input" name="password" placeholder="Senha" id="pwd-input" />
                 <button id="submit-button">Entrar</button>
             </form>
         </section>
@@ -30,22 +34,19 @@
         <section class="display">
             <form id="evaluation-form">
                 <section class="name-surname-wrapper">
-                    <div class="form-item">
-                        <label for="input-name">Nome</label>
-                        <input type="text" id="input-name" placeholder="Nome">
+                    <div class="form-item input-form">
+                        <input type="text" class="input" id="input-name" placeholder="Nome">
                     </div>
-                    <div class="form-item">
-                        <label for="input-lastname">Sobrenome</label>
-                        <input type="text" id="input-lastname" placeholder="Sobrenome">
+                    <div class="form-item input-form">
+                        <input type="text" class="input" id="input-lastname" placeholder="Sobrenome">
                     </div>
                 </section>
                 <!-- Req 11 -->
                 <section class="email-house-wrapper">
-                    <div class="form-item">
-                        <label for="input-email">Email</label>
-                        <input type="text" id="input-email" placeholder="Email">
+                    <div class="form-item input-form">
+                        <input type="text" class="input" id="input-email" placeholder="Email">
                     </div>
-                    <div class="form-item">
+                    <div class="form-item select select-form">
                         <label>casa:</label>
                         <select name="" id="house">
                             <option value="Gitnória" id="gitnoria-house">Gitnória</option>
@@ -69,77 +70,84 @@
                 </section>
                 <section class="checkbox-content">
                     <label id="label-content">Qual conteúdo você está com mais vontade de aprender?</label>
-
-                    <div class="form-item">
-                        <input type="checkbox" name="subject" class="subject" value="HoFs">HoFs
-                    </div>
-                    <div class="form-item">
-                        <input type="checkbox" name="subject" class="subject" value="Jest">Jest
-                    </div>
-                    <div class="form-item">
-                        <input type="checkbox" name="subject" class="subject" value="Promises">Promises
-                    </div>
-                    <div class="form-item">
-                        <input type="checkbox" name="subject" class="subject" value="React">React
-                    </div>
-                    <div class="form-item">
-                        <input type="checkbox" name="subject" class="subject" value="SQL">SQL
-                    </div>
-                    <div class="form-item">
-                        <input type="checkbox" name="subject" class="subject" value="Python">Python
-                    </div>
+                    <div class="align">
+                        <div class="form-item">
+                            <input type="checkbox" name="subject" class="subject check" value="HoFs">HoFs
+                        </div>
+                        <div class="form-item">
+                            <input type="checkbox" name="subject" class="subject check" value="Jest">Jest
+                        </div>
+                        <div class="form-item">
+                            <input type="checkbox" name="subject" class="subject check" value="Promises">Promises
+                        </div>
+                        <div class="form-item">
+                            <input type="checkbox" name="subject" class="subject check" value="React">React
+                        </div>
+                        <div class="form-item">
+                            <input type="checkbox" name="subject" class="subject check" value="SQL">SQL
+                        </div>
+                        <div class="form-item">
+                            <input type="checkbox" name="subject" class="subject check" value="Python">Python
+                        </div>
+                    </div>   
                 </section>
                 <hr>
                 <!-- Requisito 14 -->
                 <section class="form-satisfacao">
                     <label for="" id="label-rate">Como você avalia a Trybewarts?</label>
-                    <input type="radio" name="rate" class="rate" id="input-radio-1" value="1">
-                    <label for="input-radio-1">1</label>
-                    <input type="radio" name="rate" class="rate" id="input-radio-2" value="2">
-                    <label for="input-radio-2">2</label>
-                    <input type="radio" name="rate" class="rate" id="input-radio-3" value="3">
-                    <label for="input-radio-3">3</label>
-                    <input type="radio" name="rate" class="rate" id="input-radio-4" value="4">
-                    <label for="input-radio-4">4</label>
-                    <input type="radio" name="rate" class="rate" id="input-radio-5" value="5">
-                    <label for="input-radio-5">5</label>
-                    <input type="radio" name="rate" class="rate" id="input-radio-6" value="6">
-                    <label for="input-radio-6">6</label>
-                    <input type="radio" name="rate" class="rate" id="input-radio-7" value="7">
-                    <label for="input-radio-7">7</label>
-                    <input type="radio" name="rate" class="rate" id="input-radio-8" value="8">
-                    <label for="input-radio-8">8</label>
-                    <input type="radio" name="rate" class="rate" id="input-radio-9" value="9">
-                    <label for="input-radio-9">9</label>
-                    <input type="radio" name="rate" class="rate" id="input-radio-10" value="10">
-                    <label for="input-radio-10">10</label>
+                    <div class="align">
+                        <input type="radio" name="rate" class="rate" id="input-radio-1" value="1">
+                        <label for="input-radio-1">1</label>
+                        <input type="radio" name="rate" class="rate" id="input-radio-2" value="2">
+                        <label for="input-radio-2">2</label>
+                        <input type="radio" name="rate" class="rate" id="input-radio-3" value="3">
+                        <label for="input-radio-3">3</label>
+                        <input type="radio" name="rate" class="rate" id="input-radio-4" value="4">
+                        <label for="input-radio-4">4</label>
+                        <input type="radio" name="rate" class="rate" id="input-radio-5" value="5">
+                        <label for="input-radio-5">5</label>
+                        <input type="radio" name="rate" class="rate" id="input-radio-6" value="6">
+                        <label for="input-radio-6">6</label>
+                        <input type="radio" name="rate" class="rate" id="input-radio-7" value="7">
+                        <label for="input-radio-7">7</label>
+                        <input type="radio" name="rate" class="rate" id="input-radio-8" value="8">
+                        <label for="input-radio-8">8</label>
+                        <input type="radio" name="rate" class="rate" id="input-radio-9" value="9">
+                        <label for="input-radio-9">9</label>
+                        <input type="radio" name="rate" class="rate" id="input-radio-10" value="10">
+                        <label for="input-radio-10">10</label>
+                    </div>
                 </section>
+                <hr>
 
                 <!-- Req 16 -->
-               <section class="textarea-container">
-                 <label for="" class="textarea">Deixe seu comentário:</label>
-                <textarea name="" id="textarea" cols="60" rows="10" maxlength="500"></textarea>
-                <p id="counter">500</p>
-               </section>
+                <section class="textarea-container">
+                    <label for="" class="textarea">Deixe seu comentário:</label>
+                    <textarea name="" id="textarea" cols="60" rows="10" maxlength="500"></textarea>
+                    <p id="counter">500</p>
+                </section>
 
                 <div class="form-condition">
-                    <input type="checkbox" name="" id="agreement">
+                    <input type="checkbox" name="" id="agreement" class="subject">
                     <label for="agreement" id="label-infos">Você concorda com o uso das informações acima?</label>
                 </div>
                 <!-- req 17 -->
                 <div class="form-btn">
                     <button type="submit" disabled="disabled" id="submit-btn">Enviar</button>
                 </div>
+
             </form>
         </section>
         <!-- container da image       -->
         <div class="img">
-            <img src="images/trybewarts-colored.svg" alt="" id="trybewarts-forms-logo">
+            <img src="images/trybewarts-colored.svg" alt="Trywarts Logo" id="trybewarts-forms-logo">
         </div>
         </div>
     </main>
 
-    <footer>Direitos reservados à Trybewarts©</footer>
+    <footer>
+        <div>Direitos reservados à Trybewarts©</div>
+    </footer>
     <script src="script.js"></script>
 </body>
 
