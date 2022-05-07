@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Inknut Antiqua, Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -11,7 +12,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  font-family: Inknut Antiqua, Arial, Helvetica, sans-serif;
   background-color: rgb(240, 236, 236);
 }
 
@@ -24,6 +24,10 @@ body {
   height: 90px;
 }
 
+.img {
+  height: 70%;
+  display: flex;
+}
 
 .img-logo img {
   max-height: 100%;
@@ -42,7 +46,6 @@ h1 {
 h2 {
   text-align: center;
   color: black;
-  font-family: Inknut Antiqua, Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
 }
 
@@ -54,6 +57,15 @@ h2 {
   align-items: center;
 }
 
+.trybewarts-login #email-input , .trybewarts-login #pwd-input {
+  width: 100%;
+  background-color: white;
+  border-radius: 12px;
+  border: none;
+  padding: 10px;
+  height: 80%;
+}
+
 #submit-button {
   width: 100%;
   height: 80%;
@@ -63,7 +75,6 @@ h2 {
   border-radius: 10px;
   border: none;
   cursor: pointer;
-  font-family: Inknut Antiqua, Arial, Helvetica, sans-serif;
 }
 
 /* main css */
@@ -82,16 +93,17 @@ h2 {
 .main .display #evaluation-form {
   display: flex;
   flex-direction: column;
-  width: 675px;
-  gap: 5px;
+  flex-basis: 675px;
   align-items: center;
 }
 
-.main .display #evaluation-form .name-surname-wrapper {
+.name-surname-wrapper {
+  padding-top: 10px;
   display: flex;
   flex-direction: row;
-  gap: 5px;
+  gap: 10px;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 
@@ -117,7 +129,7 @@ h2 {
 .email-house-wrapper {
   display: flex;
   flex-direction: row;
-  gap: 5px;
+  gap: px;
   width: 100%;
   margin-bottom: 10px;
 }
@@ -137,6 +149,7 @@ input::placeholder {
 }
 
 .select-form {
+  padding-left: 5px;
   display: flex;
   gap: 10px;
   width: 50%;
@@ -232,18 +245,16 @@ input::placeholder {
   right: 10px;
 }
 
-.main .img #trybewarts-forms-logo {
-  height: 500px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
 .trybewarts-logo-container {
   height: 100%;
   display: flex;
   align-items: center;
 }
+
+#trybewarts-forms-logo {
+  height: 500px;
+}
+
 
 .main .display .form-condition {
   display: flex;
