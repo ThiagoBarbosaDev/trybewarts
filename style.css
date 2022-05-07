@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
   margin: 0;
@@ -11,7 +11,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  font-family: "Inknut Antiqua", Arial, Helvetica, sans-serif;
+  font-family: Inknut Antiqua, Arial, Helvetica, sans-serif;
   background-color: rgb(240, 236, 236);
 }
 
@@ -24,11 +24,6 @@ body {
   height: 90px;
 }
 
-.img {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
 
 .img-logo img {
   max-height: 100%;
@@ -47,7 +42,7 @@ h1 {
 h2 {
   text-align: center;
   color: black;
-  font-family: 'Inknut Antiqua', Arial, Helvetica, sans-serif;
+  font-family: Inknut Antiqua, Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
 }
 
@@ -68,7 +63,7 @@ h2 {
   border-radius: 10px;
   border: none;
   cursor: pointer;
-  font-family: 'Inknut Antiqua', Arial, Helvetica, sans-serif;
+  font-family: Inknut Antiqua, Arial, Helvetica, sans-serif;
 }
 
 /* main css */
@@ -87,7 +82,7 @@ h2 {
 .main .display #evaluation-form {
   display: flex;
   flex-direction: column;
-flex-basis: 675px;
+  width: 675px;
   gap: 5px;
   align-items: center;
 }
@@ -100,15 +95,23 @@ flex-basis: 675px;
 }
 
 
-
-#evaluation-form .trybewarts-login input {
-  height: 30px;
-  border: none;
-  border-radius: 5px;
+#input-name , #input-lastname , #input-email {
   width: 100%;
   background-color: white;
-  font-family: 'Inknut Antiqua', Arial, Helvetica, sans-serif;
-  padding-left: 15px;
+  border-radius: 5px;
+  border: none;
+  font-family: Inknut Antiqua, Arial, Helvetica, sans-serif;
+  padding: 10px;
+  height: 100%;
+}
+
+.trybewarts-login input {
+  width: 100%;
+  background-color: white;
+  border-radius: 12px;
+  font-family: Inknut Antiqua, Arial, Helvetica, sans-serif;
+  padding: 10px;
+  height: 80%;
 }
 
 .email-house-wrapper {
@@ -119,28 +122,13 @@ flex-basis: 675px;
   margin-bottom: 10px;
 }
 
-#input-email {
-  width: 100%;
-}
-
-.trybewarts-login input[type=password],
-.trybewarts-login input[type=email] {
-  width: 100%;
-  background-color: white;
-  border-radius: 12px;
-  border: none;
-  font-family: 'Inknut Antiqua', Arial, Helvetica, sans-serif;
-  padding: 10px;
-  height: 80%;
-}
-
 .select-form option {
   background: white;
-  font-family: 'Inknut Antiqua', Arial, Helvetica, sans-serif;
+  font-family: Inknut Antiqua, Arial, Helvetica, sans-serif;
 }
 
 input::placeholder {
-  font-family: 'Inknut Antiqua', Arial, Helvetica, sans-serif;
+  font-family: Inknut Antiqua, Arial, Helvetica, sans-serif;
 }
 
 .input-form {
@@ -160,7 +148,7 @@ input::placeholder {
   background-color: white;
   border-radius: 5px;
   flex-grow: 1;
-  font-family: 'Inknut Antiqua', Arial, Helvetica, sans-serif;
+  font-family: Inknut Antiqua, Arial, Helvetica, sans-serif;
 }
 
 .family-content-wrapper {
@@ -247,6 +235,14 @@ input::placeholder {
 .main .img #trybewarts-forms-logo {
   height: 500px;
   width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.trybewarts-logo-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .main .display .form-condition {
@@ -268,7 +264,7 @@ input::placeholder {
   height: 40px;
   border: none;
   cursor: pointer;
-  font-family: "Inknut Antiqua", Arial, Helvetica, sans-serif;
+  font-family: Inknut Antiqua, Arial, Helvetica, sans-serif;
 }
 
 footer {
