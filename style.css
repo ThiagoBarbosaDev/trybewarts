@@ -278,6 +278,10 @@ input::placeholder {
   font-family: Inknut Antiqua, Arial, Helvetica, sans-serif;
 }
 
+#submit-btn:disabled {
+  background-color: gray;
+}
+
 footer {
   display: flex;
   justify-content: center;
