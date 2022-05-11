@@ -1,6 +1,10 @@
 const buttonSubmit = document.querySelector('#submit-button');
 const inputPwd = document.querySelector('#pwd-input');
 const inputEmail = document.querySelector('#email-input');
+const getEmail = document.getElementById('input-email');
+const form = document.querySelector('#evaluation-form');
+const inputName = document.getElementById('input-name');
+const inputLastName = document.getElementById('input-lastname');
 
 buttonSubmit.addEventListener('click', () => {
   if (inputEmail.value === 'tryber@teste.com' && inputPwd.value === '123456') {
@@ -32,25 +36,20 @@ submitForm.addEventListener('click', (event) => {
   event.preventDefault();
 });
 
-// const result = [];
-// const res = ['Nome:', 'Email:', 'Casa:', 'Família:', 'Matérias:', 'Avaliação:', 'observações:'];
-
-// const fullName = `${getName} ${getLastName}`;
-const getEmail = document.getElementById('input-email');
-const form = document.querySelector('#evaluation-form');
-const getName = document.getElementById('input-name');
-const getLastName = document.getElementById('input-lastname');
-
 const createName = () => {
   const newName = document.createElement('p');
-  newName.innerText = `Nome: ${getName.value} ${getLastName.value}`;
-  form.appendChild(newName);
+  if (inputName.value || inputLastName.value) {
+    newName.innerText = `Nome: ${inputName.value} ${inputLastName.value}`;
+    form.appendChild(newName);
+  }
 };
 
 const createEmail = () => {
   const newEmail = document.createElement('p');
-  newEmail.innerText = `Email: ${getEmail.value}`;
-  form.appendChild(newEmail);
+  if (getEmail.value) {
+    newEmail.innerText = `Email: ${getEmail.value}`;
+    form.appendChild(newEmail);
+  }
 };
 
 const createCasaEscolhida = () => {
@@ -62,14 +61,18 @@ const createCasaEscolhida = () => {
 };
 
 const createFamilia = () => {
-  const familyValue = document.querySelector('input[name="family"]:checked').value;
+  const familyValue = document.querySelector(
+    'input[name="family"]:checked',
+  ).value;
   const newFamily = document.createElement('p');
   newFamily.innerText = `Família: ${familyValue}`;
   form.appendChild(newFamily);
 };
 
 const createMaterias = () => {
-  const discipline = document.querySelectorAll('input[name="discipline"]:checked');
+  const discipline = document.querySelectorAll(
+    'input[name="discipline"]:checked',
+  );
   const newDisciplina = document.createElement('p');
   const arrayDeDisciplinas = [];
   discipline.forEach((element) => {
@@ -92,7 +95,21 @@ const createObservacoes = () => {
   form.appendChild(newObservacoes);
 };
 
+const clearPreviousForms = () => {
+  while (form.lastChild.tagName === 'P') {
+    form.removeChild(form.lastChild);
+  }
+};
+
+const resetPreviousForms = () => {
+  const formsArrayOfTextInputs = [inputName, inputLastName, inputPwd, getEmail];
+  formsArrayOfTextInputs.forEach((element) => {
+    if (element.value) { element.value = ''; }
+  });
+};
+
 submitForm.addEventListener('click', () => {
+  clearPreviousForms();
   createName();
   createEmail();
   createCasaEscolhida();
@@ -100,74 +117,5 @@ submitForm.addEventListener('click', () => {
   createMaterias();
   createNotaDeAvaliacao();
   createObservacoes();
+  resetPreviousForms();
 });
-
-// result.push(fullName);
-// result.push(getEmail);
-// result.push(house);
-// });
-
-// submitForm.addEventListener('click', () => {
-//   const getFam = document.querySelectorAll('.family');
-//   let fam;
-
-//   for (let i = 0; i < getFam.length; i += 1) {
-//     if (getFam[i].checked) {
-//       fam = getFam[i].value;
-//     }
-//   }
-
-//   result.push(fam);
-// });
-
-// submitForm.addEventListener('click', () => {
-//   const sub = document.querySelectorAll('.subject');
-//   let subs = '';
-
-//   for (let i = 0; i < sub.length; i += 1) {
-//     if (sub[i].checked) {
-//       subs += `${sub[i].value} `;
-//     }
-//   }
-
-//   result.push(subs);
-// });
-
-// submitForm.addEventListener('click', () => {
-//   const rate = document.querySelectorAll('.rate');
-//   let not;
-
-//   for (let i = 0; i < rate.length; i += 1) { if (rate[i].checked) { not = rate[i].value; } }
-
-//   result.push(not);
-// });
-
-// submitForm.addEventListener('click', () => {
-//   const textarea = document.getElementById('textarea').value;
-
-//   result.push(textarea);
-// });
-
-// submitForm.addEventListener('click', () => {
-//   const form = document.getElementById('evaluation-form');
-//   form.innerHTML = '';
-// });
-
-// submitForm.addEventListener('click', () => {
-//   const form = document.getElementById('evaluation-form');
-//   const div = document.createElement('div');
-//   div.className = 'container-result';
-
-//   form.appendChild(div);
-// });
-
-// submitForm.addEventListener('click', () => {
-//   const divContainer = document.querySelector('.container-result');
-
-//   for (let i = 0; i < result.length; i += '') {
-//     const p = document.createElement('p');
-//     p.innerHTML = `${res[i]} ${result[i]}`;
-
-//     divContainer.appendChild(p);
-//   }
-// });
